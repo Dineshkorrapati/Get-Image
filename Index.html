@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        #imageContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .result-image {
+            max-width: 200px;
+            max-height: 200px;
+            margin: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        .result-image:hover {
+            border-color: #333;
+        }
+        #moreButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: skyblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Search</h1>
+    <input type="text" id="searchInput" placeholder="Enter a keyword (e.g., dog)">
+    <button onclick="searchImages()">Search</button>
+    <div id="imageContainer"></div>
+    <button id="moreButton" onclick="loadMoreImages()">Load More</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
